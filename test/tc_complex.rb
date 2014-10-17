@@ -17,7 +17,7 @@ class TestComplex < Test::Unit::TestCase
     assert_equal("(1,-3)", (@a-@b).to_s)
     assert_equal("(8,4)", (@a*@b).to_s)
     assert_equal("(0.5,-1)", (@a/@b).to_s)
-    assert_equal("(6,-2)", (2*@a).to_s)
+    assert_equal("(6,-2)", (@a*2).to_s)
   end
   def test_type_check
     assert_raise(RuntimeError) {Complex.new('1','1')}
