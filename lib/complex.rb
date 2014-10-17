@@ -22,23 +22,20 @@ class Complex
     #Multiplicación
     if other.is_a?(Complex)
     Complex.new((@x * other.x) - (@y * other.y), (@x * other.y) - (@y * other.x))
-    
+    end
     #Producto escalar
     if other.is_a?(Fixnum)
-    Complex.new(@x * value, @y * value)
+    Complex.new(@x * other, @y * other)
+    end
   end
   
   #División
   def / (other)	
-    Complex.new(((@x * other.x) + (@y * other.y)) / ( (other.x*other.x) + (other.y*other.y)) , (@y * other.x) - (@x * other.y) / ( (other.x*other.x) + (other.y*other.y))
+    Complex.new(((@x * other.x) + (@y * other.y)) / ( (other.x*other.x) + (other.y*other.y)) ,( (@y * other.x) - (@x * other.y)) / ( (other.x*other.x) + (other.y*other.y)))
   end
-  
- 
-  
+    
   def -@	#Inverso
     Complex.new(@x * -1, @y * -1)
-  end
-
-  def 
+  end 
 
 end
